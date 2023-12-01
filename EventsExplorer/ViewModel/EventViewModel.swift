@@ -11,8 +11,12 @@ final class EventViewModel: ObservableObject {
     @Published var firstEventName = ""
     @Published var isLoaded = false
     
-    var webViewInteractor: WebViewInteractor?
+    private var webViewInteractor: WebViewInteractor?
 
+    func setupWebViewInteractor(_ webInteractor: WebViewInteractor) {
+        webViewInteractor = webInteractor
+    }
+    
     func fetchFirstEventNameData() {
         guard let webViewInteractor = webViewInteractor else { return }
 

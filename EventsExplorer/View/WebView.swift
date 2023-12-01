@@ -36,7 +36,9 @@ struct WebView: UIViewRepresentable {
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             parent.viewModel.isLoaded = true
-            parent.viewModel.webViewInteractor = WKWebViewInteractor(webView: webView)
+            
+            let webInteractor = WKWebViewInteractor(webView: webView)
+            parent.viewModel.setupWebViewInteractor(webInteractor)
             
             parent.viewModel.fetchFirstEventNameData()
         }
