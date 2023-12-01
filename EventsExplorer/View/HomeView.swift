@@ -27,7 +27,7 @@ struct HomeView: View {
             Text(viewModel.isLoaded ? viewModel.firstEventName : loadingInformation)
                 .padding()
                 .onTapGesture {
-                    viewModel.clickEventInBrowser()
+                    viewModel.clickFirstEventInBrowser()
                 }
         }
     }

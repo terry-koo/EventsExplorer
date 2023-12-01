@@ -37,7 +37,7 @@ final class EventViewModel: ObservableObject {
         }
     }
 
-    func clickEventInBrowser() {
+    func clickFirstEventInBrowser() {
         guard let webViewInteractor = webViewInteractor else { return }
 
         let clickFirstEventNameScript =
